@@ -1,0 +1,134 @@
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/apply.css">
+<link rel="stylesheet" href="css/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/0dfdec2c7e.js"></script>
+
+<div class="logo">[Server]</div>
+<img class="backguy" style="bottom: 0vw; left: 67vw; top: unset;" src="img/pic3.png">
+
+<ul class="menu">
+    <li class="menuitem" onclick="openLink('start')">Start</li>
+    <li class="menuitem" onclick="openLink('about')">About</li>
+    <li class="menuitem" onclick="openLink('rules')">Rules</li>
+    <li class="menuitem" onclick="openLink('whitelist')">Whitelist</li>
+    <li class="menuitem" onclick="openLink('apply')" style="border-color: #3ca918">Staff Apply</li>
+    <li class="menuitem" onclick="openLink('contact')">Contact</li>
+    <li class="menuitem" onclick="openLink('partner')">Partner</li>
+    <li class="menuitem" onclick="openLink('imprint')">Imprint</li>
+</ul>
+
+<div class="maintext">
+
+    <form method="post" action="php/apply.php" enctype='multipart/form-data'>
+
+        <p>Nickname & Discordname*</p>
+        <p><input type="text" name="username" required></p>
+
+        <p>Rank*</p>
+        <p>
+            <select name="subject" onclick="selectRang(this.value)" required>
+                <option value="Developer">Helper</option>
+                <option value="Supporter">Admin</option>
+                <option value="Concept">Super Admin</option>
+                <option value="others">Developer</option>
+            </select>
+        </p>
+
+        <p>E-Mail-Adress*</p>
+        <p><input type="email" name="email" required></p>
+
+        <p>Sta rpate na serveru??*</p>
+        <p><textarea name="body" required></textarea ></p >
+    
+        <p>Koliko sati imati u fivemu? Obavezna Slika!</p>
+        <p><input type="file" class="input-file" name="data"></p>
+
+        <p >
+        <input type="submit" name="submit" value="Nachricht abschicken" >
+        </p >
+
+        <div class="dev">
+                <p>Koliko imate godina??</p>
+                <p><input type="text" name="dev-scriptsprache"></p >
+
+                <p>Koliko ste aktivni na serveru?</p>
+                <p><input type="text" name="dev-vorstellung"></p >
+
+                <p>Koliko znate pravila (0/10)?</p>
+                <p><input type="text" name="dev-since"></p >
+
+                <p>Zasto bi vas izabrali?</p>
+                <p><input type="text" name="dev-network"></p >
+
+                <p>Ime i Prezime (IC) *?</p>
+                <p><input type="text" name="dev-time"></p >
+        </div>
+
+        <div class="sup" style="display: none;">
+                <p>Koliko imate godina???</p>
+                <p><input type="text" name="sup-aufgabe"></p >
+
+                <p>Ime i Prezime (IC)?</p>
+                <p><input type="text" name="sup-start"></p >
+
+                <p>Koliko znate pravila (0/10) ?</p>
+                <p><input type="text" name="sup-begriff"></p >
+
+                <p>Koliko ste aktivni na serveru?</p>
+                <p><input type="text" name="sup-time"></p >
+
+                <p>Zasto bi vas izabrali?</p>
+                <p><input type="text" name="sup-right"></p >
+
+                <p>Da li ste pre bili na nekom serveru admin ako da na kom?</p>
+                <p><input type="text" name="sup-online"></p >
+        </div>
+
+        <div class="kon" style="display: none;">
+                <p>STEAM IME:</p>
+                <p><input type="text" name="kon-tools"></p >
+
+                <p>KOLIKO IMATE GODINA(ooc)?</p>
+                <p><input type="text" name="kon-fertig"></p >
+
+                <p>POZNAVANJE RP PRAVILA (1-10):?</p>
+                <p><input type="text" name="kon-worauf"></p >
+
+                <p>DA LI STE VEĆ NEGDJE BILI ADMIN, AKO DA GDJE?</p>
+                <p><input type="text" name="kon-limit"></p >
+
+                <p>KOLIKO MOŽETE BITI DNEVNO AKTIVNI NA SERVERU?</p>
+                <p><input type="text" name="kon-setting"></p >
+
+                <p>ŽAŠTO BAŠ VAS DA IZABEREMO?</p>
+                <p><input type="text" name="kon-online"></p >
+        </div>
+
+        <div class="son" style="display: none;">
+                <p>Za sta se prijavljujete za SKRIPTERA ili DISOCRD DEVELOPERA?</p>
+                <p><input type="text" name="son-beschreibung"></p >
+
+                <p>Koliko ste iskusni o DISCORD DEVELOPERU?</p>
+                <p><input type="text" name="son-aufgaben"></p >
+
+                <p>Koliko ste dugo na nasem serveru?</p>
+                <p><input type="text" name="son-erfahrung"></p >
+
+                <p>Koliko ste aktivni?</p>
+                <p><input type="text" name="son-time"></p >
+
+                <p>Koliko dugo mozete raditi na nasem serveru?</p>
+                <p><input type="text" name="son-setting"></p >
+
+                <p>Koliko ste iskusni o SKRIPTANJU?</p>
+                <p><input type="text" name="son-online"></p >
+        </div>
+    
+    </form >
+    
+</div>
+</html>
+<!--Copyright (c) 2022 Tarkov RolePLay-->
